@@ -18,7 +18,7 @@ const Register = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('https://intern-reg-portal.onrender.com', form);
+      await axios.post('http://localhost:5000/api/applicant', form);
       alert("Registration successful!");
       setForm({ name: '', email: '', phone: '', skills: '', why: '' });
     } catch (err) {
@@ -43,4 +43,5 @@ const Register = () => {
 };
 
 export default Register;
+
 
