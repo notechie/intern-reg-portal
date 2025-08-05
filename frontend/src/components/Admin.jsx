@@ -6,7 +6,7 @@ const Admin = () => {
   const [applicants, setApplicants] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/applicant')
+    axios.get('https://intern-reg-portal.onrender.com')
       .then(res => setApplicants(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -29,3 +29,4 @@ const Admin = () => {
 };
 
 export default Admin;
+
